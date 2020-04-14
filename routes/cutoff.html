@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Server</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+  </head>
+  <body>
+    <br><br>
+    <div class="container">
+      <input type="file" id="fileInput"/>
+      <h4 id="fileName"></h4>
+      <br><br>
+    </div>
+    <div class="container" >
+      <form id="formCutoffs" method="post" action="/cutoffs">
+        <div class="row">
+          <div class="col">
+            <label for="A+">A+</label><br>
+            <input type="number" id="A+" name="A+" value="95" disabled required><br>
+          </div>
+          <div class="col">
+            <label for="A">A</label><br>
+            <input type="number" id="A" name="A" value="90" disabled required><br>
+          </div>
+          <div class="col">
+            <label for="A-">A-</label><br>
+            <input type="number" id="A-" name="A-" value="85" disabled required><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="B+">B+</label><br>
+            <input type="number" id="B+" name="B+" value="80" disabled required><br>
+          </div>
+          <div class="col">
+            <label for="B">B</label><br>
+            <input type="number" id="B" name="B" value="75" disabled required><br>
+          </div>
+          <div class="col">
+            <label for="B-">B-</label><br>
+            <input type="number" id="B-" name="B-" value="70" disabled required><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="A+">C+</label><br>
+            <input type="number" id="C+" name="C+" value="65" disabled required><br>
+          </div>
+          <div class="col">
+            <label for="C">C</label><br>
+            <input type="number" id="C" name="C" value="60" disabled required><br>
+          </div>
+          <div class="col">
+            <label for="C-">C-</label><br>
+            <input type="number" id="C-" name="C-" value="55" disabled required><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <label for="D">D</label><br>
+            <input type="number" id="D" name="D" value="50" disabled required><br>
+          </div>
+          <div class="col">
+            <label for="F">F</label><br>
+            <input type="number" id="F" name="F" value="0" disabled required><br>
+          </div>
+          <div class="col">
+          
+          </div>
+        </div>
+        <br>
+        <input type="submit" id="cutoffSubmit" value="Submit" hidden>
+      </form>
+    </div>
+    <br>
+      <div class="container">
+        <table class="table text-center" id="tableGrades">
+            <thead>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+      </div>
+      <br>
+      <div class="container">
+        <table class="table text-center" id="tableStudents">
+            <thead>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+      </div>
+      <br>
+      <div class="container">
+        <table class="table text-center" id="tableHistogram">
+            <thead>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+      </div>
+
+    <script src="./main.js" charset="utf-8"></script>
+    <!-- <script src="./cutoffSubmit.js" charset="utf-8"></script> -->
+  </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Server</title>
+    <link rel="stylesheet" type="text/css" href="./style.css"
+  />
+  </head>
+  <body>
+    <br><br>
+    <div>
+      <input type="file" id="fileInput"/>
+      <h4 id="fileName"></h4>
+      <br>
+    </div>
+    <div>
+      <form id="formCutoffs" hidden>
+        <p>Enter the cutoff values</p>
+
+        <div class="row">
+          <div class="column">
+            <label for="A+">A+</label><br>
+            <input type="number" id="A+" name="A+" disabled required><br>
+          </div>
+          <div class="column">
+            <label for="A">A</label><br>
+            <input type="number" id="A" name="A" disabled required><br>
+          </div>
+          <div class="column">
+            <label for="A-">A-</label><br>
+            <input type="number" id="A-" name="A-" disabled required><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="B+">B+</label><br>
+            <input type="number" id="B+" name="B+" disabled required><br>
+          </div>
+          <div class="column">
+            <label for="B">B</label><br>
+            <input type="number" id="B" name="B" disabled required><br>
+          </div>
+          <div class="column">
+            <label for="B-">B-</label><br>
+            <input type="number" id="B-" name="B-" disabled required><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="A+">C+</label><br>
+            <input type="number" id="C+" name="C+" disabled required><br>
+          </div>
+          <div class="column">
+            <label for="C">C</label><br>
+            <input type="number" id="C" name="C" disabled required><br>
+          </div>
+          <div class="column">
+            <label for="C-">C-</label><br>
+            <input type="number" id="C-" name="C-" disabled required><br>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column">
+            <label for="D">D</label><br>
+            <input type="number" id="D" name="D" disabled required><br>
+          </div>
+          <div class="column">
+          
+            <br>
+            <button type="submit">Submit Cutoffs</button>
+          </div>
+          <div class="column">
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <br>
+
+    <div class="row">
+      <div class="column_50">
+        <button type="submit" id="ascendingByPercentage" onclick="ascendingByPercentage()" hidden>ascending</button>
+        <button type="submit" id="descendingByPercentage" onclick="descendingByPercentage()" hidden>descending</button>
+          <table class="table text-center" id="tableStudents">
+            <thead>
+            </thead>
+            <tbody>
+
+            </tbody>
+         </table>
+      </div>
+      <div class="column_25">
+        <br>
+        <br>
+        <br>
+         <table class="table text-center" id="tableHistogram">
+          <tbody>
+          </tbody>
+          <tfoot>
+          </tfoot>
+        </table>
+        <br>
+        <br>
+        <br>
+         <table class="table text-center" id="tableGradesWeights">
+          <thead>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    <script src="./main.js" charset="utf-8"></script>
+    <script src="./cutoffSubmit.js" charset="utf-8"></script>
+  </body>
+</html>
